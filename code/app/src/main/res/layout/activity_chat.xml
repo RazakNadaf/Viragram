@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viragram_bg_light"
+    android:orientation="vertical"
+    tools:context=".activities.ChatActivity">
+
+    <!-- Top Header Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/viragram_surface_light"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageView
+                android:id="@+id/btn_chat_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/btn_back_to_login"
+                android:src="@drawable/ic_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/layout_chat_avatar_container"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_chat_back"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_chat_header_avatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/cd_author_avatar"
+                    tools:src="@drawable/ic_avatar_1" />
+
+                <View
+                    android:id="@+id/v_chat_header_online"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/bg_online_dot"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_chat_call"
+                app:layout_constraintStart_toEndOf="@id/layout_chat_avatar_container"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_chat_header_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viragram_text_primary"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="Rahul Patil" />
+
+                <TextView
+                    android:id="@+id/tv_chat_header_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viragram_text_secondary"
+                    android:textSize="12sp"
+                    tools:text="Online" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_chat_call"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:padding="6dp"
+                android:src="@drawable/ic_phone_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_chat_video"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/viragram_text_primary" />
+
+            <ImageView
+                android:id="@+id/btn_chat_video"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:padding="6dp"
+                android:src="@drawable/ic_videocam_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/viragram_text_primary" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/viragram_border" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Chat Messages RecyclerView Area -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chat_messages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:stackFromEnd="true" />
+
+        <TextView
+            android:id="@+id/tv_chat_empty_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Start the conversation"
+            android:textColor="@color/viragram_text_secondary"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <!-- Bottom Message Composer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/viragram_surface_light"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp">
+
+        <EditText
+            android:id="@+id/et_chat_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounded_card"
+            android:hint="Message..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="4"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/viragram_text_primary"
+            android:textColorHint="@color/viragram_text_hint"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/btn_send_chat"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:src="@drawable/ic_send_24"
+            app:tint="@color/viragram_purple_primary" />
+
+    </LinearLayout>
+
+</LinearLayout>

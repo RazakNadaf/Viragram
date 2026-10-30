@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+  <!-- V Monogram Squircle Badge only, no custom path text that overlaps -->
+  <path
+      android:pathData="M8,4 h20 a8,8 0 0 1 8,8 v12 a8,8 0 0 1 -8,8 h-20 a8,8 0 0 1 -8,-8 v-12 a8,8 0 0 1 8,-8 z"
+      android:fillColor="@color/viragram_purple_primary"/>
+  <!-- Sharp V path inside badge -->
+  <path
+      android:pathData="M11,10 L18,26 L25,10 L21,10 L18,19 L15,10 Z"
+      android:fillColor="#FFFFFF"/>
+</vector>

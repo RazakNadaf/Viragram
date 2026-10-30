@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="500dp"
+    android:viewportWidth="400"
+    android:viewportHeight="500">
+  <!-- Dark Stage Background -->
+  <path
+      android:pathData="M0,0h400v500H0z"
+      android:fillColor="#111827"/>
+  <!-- Spotlight Beams -->
+  <path
+      android:pathData="M80,0 L0,350 L160,350 Z"
+      android:fillColor="#337C3AED"/>
+  <path
+      android:pathData="M320,0 L240,350 L400,350 Z"
+      android:fillColor="#33E11D48"/>
+  <path
+      android:pathData="M200,0 L100,400 L300,400 Z"
+      android:fillColor="#22A855F7"/>
+  <!-- Stage Lights Truss -->
+  <path
+      android:pathData="M0,40 h400 v12 h-400 z"
+      android:fillColor="#374151"/>
+  <!-- Stage Speakers -->
+  <path
+      android:pathData="M20,200 h40 v120 h-40 z M340,200 h40 v120 h-40 z"
+      android:fillColor="#1F2937"/>
+  <path
+      android:pathData="M30,220 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 M30,280 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 M350,220 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 M350,280 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0"
+      android:fillColor="#4B5563"/>
+  <!-- Stage Floor & Banner -->
+  <path
+      android:pathData="M0,320 h400 v30 h-400 z"
+      android:fillColor="#7C3AED"/>
+  <!-- Banner Text / Graphic -->
+  <path
+      android:pathData="M120,330 L160,330 M240,330 L280,330"
+      android:strokeColor="#FFFFFF"
+      android:strokeWidth="3"/>
+  <!-- Crowd Silhouettes -->
+  <path
+      android:pathData="M0,500 L0,380 C30,360 50,400 80,370 C110,400 130,360 160,380 C190,360 210,400 240,370 C270,400 290,360 320,380 C350,360 380,390 400,370 L400,500 Z"
+      android:fillColor="#030712"/>
+  <!-- Raised Hands Silhouettes -->
+  <path
+      android:pathData="M60,390 L65,340 M140,400 L145,330 M220,380 L215,320 M300,390 L305,335 M360,400 L355,345"
+      android:strokeColor="#030712"
+      android:strokeWidth="8"
+      android:strokeLineCap="round"/>
+</vector>

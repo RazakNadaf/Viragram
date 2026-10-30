@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/viragram_surface_light"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@color/viragram_border" />
+
+    <TextView
+        android:id="@+id/btn_menu_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:text="@string/menu_save_post"
+        android:textColor="@color/viragram_text_primary"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_bookmark_24"
+        app:drawableTint="@color/viragram_text_primary" />
+
+    <TextView
+        android:id="@+id/btn_menu_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:text="@string/menu_report_post"
+        android:textColor="@color/viragram_like_red"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_report_24" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/viragram_border" />
+
+    <TextView
+        android:id="@+id/btn_menu_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/menu_cancel"
+        android:textColor="@color/viragram_text_secondary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

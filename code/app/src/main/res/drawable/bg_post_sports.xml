@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="500dp"
+    android:viewportWidth="400"
+    android:viewportHeight="500">
+  <!-- Sky / Stadium Upper Area -->
+  <path
+      android:pathData="M0,0h400v220H0z"
+      android:fillColor="#0284C7"/>
+  <!-- Stadium Floodlight Beams -->
+  <path
+      android:pathData="M40,20 L0,220 L120,220 Z M360,20 L280,220 L400,220 Z"
+      android:fillColor="#33FFFFFF"/>
+  <!-- Green Turf Pitch -->
+  <path
+      android:pathData="M0,220h400v280H0z"
+      android:fillColor="#15803D"/>
+  <!-- Grass Stripes -->
+  <path android:pathData="M0,260h400v40H0z" android:fillColor="#166534"/>
+  <path android:pathData="M0,340h400v40H0z" android:fillColor="#166534"/>
+  <path android:pathData="M0,420h400v40H0z" android:fillColor="#166534"/>
+
+  <!-- Field Penalty Box & Center Circle Lines -->
+  <path
+      android:pathData="M200,360m-60,0a60,60 0 1,0 120,0a60,60 0 1,0 -120,0"
+      android:strokeColor="#FFFFFF"
+      android:strokeWidth="3"
+      android:fillColor="#00000000"/>
+  <path
+      android:pathData="M0,360 H400"
+      android:strokeColor="#FFFFFF"
+      android:strokeWidth="3"/>
+
+  <!-- Football Graphic in Foreground -->
+  <path
+      android:pathData="M200,360m-30,0a30,30 0 1,0 60,0a30,30 0 1,0 -60,0"
+      android:fillColor="#FFFFFF"/>
+  <!-- Football Pentagram Pattern -->
+  <path
+      android:pathData="M200,346 L212,355 L208,370 L192,370 L188,355 Z"
+      android:fillColor="#0F172A"/>
+</vector>

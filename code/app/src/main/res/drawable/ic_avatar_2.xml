@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+  <!-- Circular Background -->
+  <path
+      android:pathData="M36,36m-36,0a36,36 0 1,0 72,0a36,36 0 1,0 -72,0"
+      android:fillColor="#CCFBF1"/>
+  <!-- Torso / Teal Top -->
+  <path
+      android:pathData="M16,62 C16,48 24,44 36,44 C48,44 56,48 56,62 Z"
+      android:fillColor="#0D9488"/>
+  <!-- Face & Neck -->
+  <path
+      android:pathData="M36,46 C32,46 31,41 31,38 L41,38 C41,41 40,46 36,46 Z"
+      android:fillColor="#FDBA74"/>
+  <path
+      android:pathData="M36,39m-12,0a12,14 0 1,0 24,0a12,14 0 1,0 -24,0"
+      android:fillColor="#FED7AA"/>
+  <!-- Long Dark Hair -->
+  <path
+      android:pathData="M22,26 C22,14 50,14 50,26 C50,38 48,48 45,52 C45,40 46,24 36,24 C26,24 27,40 27,52 C24,48 22,38 22,26 Z"
+      android:fillColor="#111827"/>
+  <!-- Smile -->
+  <path
+      android:pathData="M32,38 Q36,42 40,38"
+      android:strokeColor="#9A3412"
+      android:strokeWidth="1.8"
+      android:fillColor="#00000000"/>
+</vector>

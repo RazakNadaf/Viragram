@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viragram_bg_light"
+    android:fillViewport="true"
+    tools:context=".activities.PostDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Header Bar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/viragram_surface_light"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_post_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/btn_detail_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:contentDescription="@string/btn_back_to_login"
+                    android:src="@drawable/ic_arrow_back_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:text="Post Detail"
+                    android:textColor="@color/viragram_text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viragram_border" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Included Post Item Layout for Full Detail Display -->
+        <include
+            android:id="@+id/layout_post_content"
+            layout="@layout/item_post" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

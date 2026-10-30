@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Viragram Brand Colors -->
+    <color name="viragram_purple_primary">#7C3AED</color>
+    <color name="viragram_purple_dark">#5B21B6</color>
+    <color name="viragram_purple_light">#F3E8FF</color>
+    <color name="viragram_pink_accent">#E11D48</color>
+
+    <!-- Viragram Gradient Accent Colors -->
+    <color name="viragram_gradient_start">#833AB4</color>
+    <color name="viragram_gradient_middle">#FD1D1D</color>
+    <color name="viragram_gradient_end">#FCB045</color>
+
+    <!-- UI Surface & Background Colors -->
+    <color name="viragram_bg_light">#FAFAFA</color>
+    <color name="viragram_surface_light">#FFFFFF</color>
+    <color name="viragram_border">#EAEAEA</color>
+    <color name="viragram_divider">#E0E0E0</color>
+    <color name="viragram_input_bg">#F8F9FA</color>
+
+    <!-- Text Colors -->
+    <color name="viragram_text_primary">#0F172A</color>
+    <color name="viragram_text_secondary">#64748B</color>
+    <color name="viragram_text_hint">#94A3B8</color>
+    <color name="viragram_text_white">#FFFFFF</color>
+
+    <!-- Interaction Colors -->
+    <color name="viragram_like_red">#F43F5E</color>
+    <color name="viragram_nav_active">#0F172A</color>
+    <color name="viragram_nav_inactive">#94A3B8</color>
+
+    <!-- Base system compat -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

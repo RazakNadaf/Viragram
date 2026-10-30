@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viragram_bg_light"
+    android:fillViewport="true"
+    tools:context=".activities.VerifyEmailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/iv_verify_logo"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="48dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_viragram_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_verify_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/title_verify_email"
+            android:textColor="@color/viragram_text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_verify_logo" />
+
+        <TextView
+            android:id="@+id/tv_verify_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="A verification link has been sent to your Goa University email address:"
+            android:textColor="@color/viragram_text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_verify_title" />
+
+        <!-- Display Email Address -->
+        <TextView
+            android:id="@+id/tv_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/viragram_purple_light"
+            android:gravity="center"
+            android:padding="14dp"
+            android:textColor="@color/viragram_purple_dark"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_verify_subtitle"
+            tools:text="student@unigoa.ac.in" />
+
+        <!-- Information / Instruction Card -->
+        <TextView
+            android:id="@+id/tv_verify_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="Please check your email inbox (including spam folder), click the verification link, and then tap 'I\'ve Verified' below."
+            android:textColor="@color/viragram_text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_email" />
+
+        <!-- Verify / Check Verification Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_verify_submit"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/viragram_purple_primary"
+            android:text="I've Verified"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_verify_instructions" />
+
+        <!-- Resend Link -->
+        <TextView
+            android:id="@+id/btn_resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="Resend Verification Link"
+            android:textColor="@color/viragram_purple_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_verify_submit" />
+
+        <!-- Back to Login Option -->
+        <TextView
+            android:id="@+id/btn_change_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:text="Back to Sign In"
+            android:textColor="@color/viragram_text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_resend_otp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="6dp"
+    app:cardBackgroundColor="@color/viragram_surface_light"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/viragram_border"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_announcement_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/viragram_purple_light"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
+                android:textColor="@color/viragram_purple_primary"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:text="ACADEMIC" />
+
+            <TextView
+                android:id="@+id/tv_announcement_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/viragram_text_hint"
+                android:textSize="11sp"
+                tools:text="Today, 10:15 AM" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_announcement_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/viragram_text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="Semester Registration Deadline Extended" />
+
+        <TextView
+            android:id="@+id/tv_announcement_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:textColor="@color/viragram_text_secondary"
+            android:textSize="13sp"
+            tools:text="Goa University academic section has extended the course registration deadline to Friday..." />
+
+        <TextView
+            android:id="@+id/tv_announcement_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/viragram_purple_primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="University Registrar" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

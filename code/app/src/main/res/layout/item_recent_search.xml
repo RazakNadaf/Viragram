@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="?attr/selectableItemBackground"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <ImageView
+        android:id="@+id/iv_history_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_history_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/viragram_text_secondary" />
+
+    <TextView
+        android:id="@+id/tv_recent_query"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/viragram_text_primary"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_remove_recent"
+        app:layout_constraintStart_toEndOf="@id/iv_history_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Rahul Patil" />
+
+    <ImageView
+        android:id="@+id/btn_remove_recent"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/app_name"
+        android:padding="6dp"
+        android:src="@drawable/ic_close_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/viragram_text_secondary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

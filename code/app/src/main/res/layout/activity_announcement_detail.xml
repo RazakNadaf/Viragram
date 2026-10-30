@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viragram_bg_light"
+    android:fillViewport="true"
+    tools:context=".activities.AnnouncementDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/viragram_surface_light"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_announcement_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/btn_announcement_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:contentDescription="@string/btn_back_to_login"
+                    android:src="@drawable/ic_arrow_back_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:text="Announcement"
+                    android:textColor="@color/viragram_text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viragram_border" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/iv_announcement_banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/bg_post_campus" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/viragram_surface_light"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_announcement_detail_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/viragram_purple_light"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/viragram_purple_primary"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                tools:text="ACADEMIC" />
+
+            <TextView
+                android:id="@+id/tv_announcement_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/viragram_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Semester Registration Deadline Extended" />
+
+            <TextView
+                android:id="@+id/tv_announcement_detail_author_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/viragram_purple_primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:text="Issued by University Registrar • Today, 10:15 AM" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/viragram_border" />
+
+            <TextView
+                android:id="@+id/tv_announcement_detail_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/viragram_text_secondary"
+                android:textSize="15sp"
+                tools:text="Goa University academic section has extended the course registration deadline to Friday, 10th March without late fee. All students are advised to submit their registration forms before the extended deadline." />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

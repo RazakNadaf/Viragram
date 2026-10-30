@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/viragram_bg_light"
+    android:fillViewport="true"
+    tools:context=".activities.EventDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/viragram_surface_light"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_event_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/btn_event_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:contentDescription="@string/btn_back_to_login"
+                    android:src="@drawable/ic_arrow_back_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:text="Event Details"
+                    android:textColor="@color/viragram_text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viragram_border" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/iv_event_detail_banner"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/bg_post_fest" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/viragram_surface_light"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_event_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/viragram_text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="Goa University Cultural Fest 2026" />
+
+            <TextView
+                android:id="@+id/tv_event_detail_organizer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/viragram_purple_primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Organized by Cultural Club" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/viragram_border" />
+
+            <!-- Date & Time Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_calendar_24"
+                    app:tint="@color/viragram_purple_primary" />
+
+                <TextView
+                    android:id="@+id/tv_event_detail_datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/viragram_text_primary"
+                    android:textSize="15sp"
+                    tools:text="Friday, 15 March 2026 • 4:00 PM onwards" />
+
+            </LinearLayout>
+
+            <!-- Location Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_location_24"
+                    app:tint="@color/viragram_purple_primary" />
+
+                <TextView
+                    android:id="@+id/tv_event_detail_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/viragram_text_primary"
+                    android:textSize="15sp"
+                    tools:text="Main Auditorium, Goa University Campus" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/viragram_border" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Event"
+                android:textColor="@color/viragram_text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_event_detail_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/viragram_text_secondary"
+                android:textSize="14sp"
+                tools:text="Annual campus cultural extravaganza featuring live music, drama performances, inter-department dance battles, and food stalls." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_event_detail_interested"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/viragram_purple_primary"
+                android:text="I'm Interested"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

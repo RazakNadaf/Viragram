@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "111475267224",
+    "project_id": "viragram-78116",
+    "storage_bucket": "viragram-78116.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111475267224:android:90f0bdacde8686917b62ed",
+        "android_client_info": {
+          "package_name": "com.example.viragram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5JDsuOTOtEWwry569h5Calp4npeaUvpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

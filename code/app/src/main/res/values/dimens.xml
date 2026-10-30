@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Standard Spacing System -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+    <dimen name="spacing_xxl">32dp</dimen>
+
+    <!-- Standard Touch Targets & Heights -->
+    <dimen name="touch_target_min">48dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+
+    <!-- Avatar Sizes -->
+    <dimen name="avatar_sm">36dp</dimen>
+    <dimen name="avatar_md">44dp</dimen>
+    <dimen name="avatar_lg">64dp</dimen>
+    <dimen name="avatar_xl">88dp</dimen>
+
+    <!-- Card Corner Radii -->
+    <dimen name="card_corner_sm">8dp</dimen>
+    <dimen name="card_corner_md">12dp</dimen>
+    <dimen name="card_corner_lg">16dp</dimen>
+
+    <!-- Typography Text Sizes -->
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_subbody">13sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_subtitle">15sp</dimen>
+    <dimen name="text_title">16sp</dimen>
+    <dimen name="text_header">18sp</dimen>
+    <dimen name="text_display">20sp</dimen>
+</resources>

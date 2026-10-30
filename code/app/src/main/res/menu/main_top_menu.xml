@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_college_hub"
+        android:icon="@drawable/ic_school_24"
+        android:title="College Hub"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_notifications"
+        android:icon="@drawable/ic_notifications_24"
+        android:title="@string/nav_notifications"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_messages"
+        android:icon="@drawable/ic_chat_24"
+        android:title="@string/action_messages"
+        app:showAsAction="always" />
+</menu>
