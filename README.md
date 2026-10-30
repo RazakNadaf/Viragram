@@ -6,6 +6,7 @@
 **Backend/Services:** Firebase (Authentication, Cloud Firestore), ImageKit CDN  
 **Student:** Razak Nadaf  
 **Roll No:** 2638  
+**Batch:** B3  
 
 ---
 
@@ -37,7 +38,7 @@ The application combines a rich social feed with an academic and club discovery 
 - **College Hub:** Categorized view for Trending Activities, Upcoming Campus Events, Official Clubs, and Department Circulars.
 - **Post Creation:** Easy photo selection, caption composing, location tagging (e.g., Goa University Campus), and privacy toggles.
 - **Direct Messaging:** One-on-one student chat with conversation history and unread message indicators.
-- **Activity Notifications:** Push-style notification list for likes, comments, new followers, and college alerts.
+- **Activity Notifications:** Notification list for likes, comments, new followers, and college alerts.
 - **Student Profile:** Customized profile showing student details (programme, year, bio), follower/following metrics, and personal post grid.
 
 ### 3.2 Administrative Features
@@ -59,85 +60,64 @@ The application combines a rich social feed with an academic and club discovery 
 | **Database** | Cloud Firestore | Real-time NoSQL database for posts, users, messages, and events |
 | **Media Hosting** | ImageKit CDN / Cloud Storage | High-speed image optimization and delivery |
 | **Image Loading** | Bumptech Glide | Image caching, placeholder management, and transformation |
-| **Backend Utilities** | Node.js | Helper administrative scripts & custom claim management |
-| **Build System** | Gradle (Kotlin DSL) | Dependency injection and build automation |
 
 ---
 
 ## 5. Project Structure
 
-The project repository follows the standard college submission structure:
-
 `	ext
 Viragram/
 │
-├── code/                                # Complete working Android Studio source project
-│   ├── app/                             # Android application module
-│   │   ├── src/main/java/               # Java source packages (activities, adapters, models, fragments)
-│   │   ├── src/main/res/                # XML layouts, drawables, values, colors, navigation
-│   │   ├── src/main/AndroidManifest.xml # Application manifest and permissions
-│   │   ├── build.gradle.kts             # App-level build and dependencies configuration
-│   │   └── google-services.json         # Firebase client configuration
-│   ├── gradle/                          # Gradle wrapper files
-│   ├── build.gradle.kts                 # Root project build configuration
-│   ├── settings.gradle.kts              # Module and repository settings
-│   ├── gradle.properties                # JVM memory and build optimization flags
-│   ├── firestore.rules                  # Firestore security rules
-│   ├── server.js                        # Node.js backend helper server
-│   └── .env.example                     # Environment template (no secrets exposed)
+├── code/                                # All 23 Core Java Activity Source Files
+│   ├── AdminClubsActivity.java          # Admin portal for managing student clubs
+│   ├── AdminCreateAnnouncementActivity.java # Admin circular broadcasting
+│   ├── AdminCreateClubActivity.java     # Admin club creation interface
+│   ├── AdminCreateEventActivity.java    # Admin event scheduler & publishing
+│   ├── AdminDashboardActivity.java      # Main administrative navigation hub
+│   ├── AdminEventsActivity.java         # Admin event management list
+│   ├── AnnouncementDetailActivity.java  # Detailed view for circulars
+│   ├── BaseActivity.java                # Common base configuration
+│   ├── ChatActivity.java                # Direct one-on-one student messaging
+│   ├── ClubDetailActivity.java          # Club profile, lead info, and joining
+│   ├── CollegeHubActivity.java          # Campus portal, trending events & clubs
+│   ├── CommentsActivity.java            # Post comment thread & replies
+│   ├── EditProfileActivity.java         # Profile editing (bio, degree, photo)
+│   ├── EventDetailActivity.java         # Event info, venue, and registration
+│   ├── ForgotPasswordActivity.java      # Password reset flow
+│   ├── LoginActivity.java               # Student institutional login
+│   ├── MessagesActivity.java            # Conversation threads & unread inbox
+│   ├── PostDetailActivity.java          # Single post full-view and interactions
+│   ├── ProfileSettingsActivity.java     # Account preferences & sign-out
+│   ├── RegisterActivity.java            # New student registration flow
+│   ├── SplashActivity.java              # Animated startup splash screen
+│   ├── StudentProfileActivity.java      # Student profile & post gallery
+│   └── VerifyEmailActivity.java         # Institutional email verification
 │
-├── report/                              # Final Project Report
-│   ├── Viragram_Project_Report.pdf      # 52-page comprehensive report with all UML diagrams
-│   └── Viragram_Project_Report.docx     # Editable Word document copy
+├── report/                              # Academic Project Documentation
+│   ├── Viragram_Project_Report.pdf      # 52-page report with all 5 UML diagrams
+│   └── Viragram_Project_Report.docx     # Editable Word copy
 │
 ├── presentation/                        # Project Presentation
 │   └── Viragram_Project_Presentation.pptx # 12-slide final project defense presentation
 │
 ├── output/                              # Application Output & Media
-│   ├── screenshots/                     # Real application screenshots
-│   │   ├── 01_Login_Screen.png
-│   │   ├── 02_Home_Feed.png
-│   │   ├── 03_College_Hub.png
-│   │   ├── 04_Create_Post.png
-│   │   ├── 05_Profile.png
-│   │   ├── 06_Messages.png
-│   │   └── 07_Notifications.png
-│   └── demo/                            # Application demonstration guide
-│       └── README.md
+│   └── screenshots/                     # 7 real application screenshots
+│       ├── 01_Login_Screen.png
+│       ├── 02_Home_Feed.png
+│       ├── 03_College_Hub.png
+│       ├── 04_Create_Post.png
+│       ├── 05_Profile.png
+│       ├── 06_Messages.png
+│       └── 07_Notifications.png
 │
+├── 2638_RazakNadaf_B3_Viragram.txt      # College submission link file (Batch B3)
+├── 2638_RazakNadaf_BX_Viragram.txt      # College submission link file
 └── README.md                            # Main project documentation
 `
 
 ---
 
-## 6. How to Run the Project
-
-### Prerequisites
-- **Android Studio:** Hedgehog / Iguana / Jellyfish / Ladybug (or newer)
-- **JDK:** Java Development Kit 17 (recommended)
-- **Android Device or Emulator:** Android 8.0 (API Level 26) or higher
-- **Internet Connection:** Active connection for Firebase data sync
-
-### Steps to Build and Run
-1. **Clone the Repository:**
-   `ash
-   git clone https://github.com/RazakNadaf/Viragram.git
-   cd Viragram
-   `
-2. **Open the Project in Android Studio:**
-   - Launch Android Studio.
-   - Click **Open** (or **File > Open**).
-   - Select the code/ folder inside the Viragram directory.
-3. **Gradle Sync:**
-   - Allow Android Studio to automatically download dependencies and sync Gradle.
-   - Verify that google-services.json is located in code/app/.
-4. **Run the Application:**
-   - Select your target device (physical device via USB or an AVD emulator).
-   - Click the green **Run** button or press Shift + F10.
-
----
-
-## 7. Screenshots
+## 6. Screenshots
 
 | 01. Login Screen | 02. Home Feed | 03. College Hub |
 | :---: | :---: | :---: |
@@ -149,9 +129,9 @@ Viragram/
 
 ---
 
-## 8. Project Documentation
+## 7. Project Documentation
 
-All academic documentation prepared for the final mini-project submission is organized inside the repository:
+All academic documentation prepared for the final mini-project submission:
 
 - **Project Report (PDF):** [eport/Viragram_Project_Report.pdf](report/Viragram_Project_Report.pdf)  
   *Contains complete documentation across 52 pages, including System Requirements, Architecture, Database Schema, and all required UML diagrams:*
@@ -164,15 +144,14 @@ All academic documentation prepared for the final mini-project submission is org
   *12-slide comprehensive presentation covering problem statement, system design, feature highlights, and future enhancements.*
 - **Output Screenshots:** [output/screenshots/](output/screenshots/)  
   *High-resolution captures of the functional mobile interface.*
-- **Demo & Testing Guide:** [output/demo/README.md](output/demo/README.md)  
-  *Walkthrough flow and testing guidance.*
 
 ---
 
-## 9. Team/Student Information
+## 8. Team/Student Information
 
 - **Student Name:** Razak Nadaf
 - **Roll Number:** 2638
+- **Batch:** B3
 - **Course:** Master of Computer Applications (MCA)
 - **Project Title:** Viragram – Your Campus Social Network
 - **Academic Year:** 2026
